@@ -10,6 +10,8 @@ public class UserRegistration {
    static  String PASSWORD_PATTERN_1 = "[a-z-0-9](?=.*[A-Z]).{8,40}";
    static  String PASSWORD_PATTERN_2=  "[a-zA-Z0-9](?=.*[A-Z]).{8,40}";
 
+   static String PASSWORD_PATTERN_4 = "(?=.*[0-9])(?=.*[A-Z]).{8,40}";
+
    static String PASSWORD_PATTERN_3 = "(?=.*[0-9])(?=.*[A-Z]).{8,40}";
 
     public boolean validFirstName(String firstName){
