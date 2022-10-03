@@ -65,4 +65,17 @@ public class UserRegistrationTest {
         boolean result = ur.validPassword1("785bridge");
         Assert.assertEquals(false,result);
     }
+
+    @Test
+    public void password3_should_return_True() {
+        UserRegistration ur = new UserRegistration();
+        boolean result = ur.validPassword3("abtsdA34");
+        Assert.assertEquals(true,result);
+    }
+    @Test
+    public void password3_should_return_False() {
+        UserRegistration ur = new UserRegistration();
+        boolean result = ur.validPassword3("78ufdye");
+        Assert.assertEquals(false,result);
+    }
 }

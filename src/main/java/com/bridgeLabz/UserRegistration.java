@@ -10,6 +10,8 @@ public class UserRegistration {
    static  String PASSWORD_PATTERN_1 = "[a-z-0-9](?=.*[A-Z]).{8,40}";
    static  String PASSWORD_PATTERN_2=  "[a-zA-Z0-9](?=.*[A-Z]).{8,40}";
 
+   static String PASSWORD_PATTERN_3 = "(?=.*[0-9])(?=.*[A-Z]).{8,40}";
+
     public boolean validFirstName(String firstName){
         Pattern pattern = Pattern.compile(NAME_PATTERN);
         return pattern.matcher(firstName).matches();
@@ -32,6 +34,10 @@ public class UserRegistration {
     }
     public boolean validPassword2(String password) {
         Pattern pattern = Pattern.compile(PASSWORD_PATTERN_2);
+        return pattern.matcher(password).matches();
+    }
+    public boolean validPassword3(String password) {
+        Pattern pattern = Pattern.compile(PASSWORD_PATTERN_3);
         return pattern.matcher(password).matches();
     }
 
