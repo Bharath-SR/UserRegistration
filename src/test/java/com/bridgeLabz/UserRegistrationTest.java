@@ -36,9 +36,21 @@ public class UserRegistrationTest {
         Assert.assertEquals(true,result);
     }
     @Test
-    public void email_should_return_false() {
+    public void email_should_return_False() {
         UserRegistration ur = new UserRegistration();
         boolean result = ur.validEmail("bridgelabz@.com");
+        Assert.assertEquals(false,result);
+    }
+    @Test
+    public void phone_should_return_True() {
+        UserRegistration ur = new UserRegistration();
+        boolean result = ur.validPhone("810045784123");
+        Assert.assertEquals(true,result);
+    }
+    @Test
+    public void phone_should_return_False() {
+        UserRegistration ur = new UserRegistration();
+        boolean result = ur.validPhone("87415927187");
         Assert.assertEquals(false,result);
     }
 }
