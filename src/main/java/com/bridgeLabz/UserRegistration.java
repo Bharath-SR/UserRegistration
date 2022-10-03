@@ -4,7 +4,8 @@ import java.util.regex.Pattern;
 
 public class UserRegistration {
 
-    private static final String NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
+    static  String NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
+    static String EMAIL_PATTERN = "^[a-zA-Z0-9.+_-]+[@][a-zA-Z0-9]+[.]co(m|.in)$";
 
     public boolean validFirstName(String firstName){
         Pattern pattern = Pattern.compile(NAME_PATTERN);
@@ -13,6 +14,10 @@ public class UserRegistration {
     public boolean validLastName(String lastName) {
         Pattern pattern = Pattern.compile(NAME_PATTERN);
         return pattern.matcher(lastName).matches();
+    }
+    public boolean validEmail(String email) {
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN);
+        return pattern.matcher(email).matches();
     }
 
 }
