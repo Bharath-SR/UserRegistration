@@ -6,6 +6,7 @@ public class UserRegistration {
 
     static  String NAME_PATTERN = "^[A-Z]{1}[a-z]{2,}$";
     static String EMAIL_PATTERN = "^[a-zA-Z0-9.+_-]+[@][a-zA-Z0-9]+[.]co(m|.in)$";
+    static String EMAIL_PATTERN_2 = "^[a-zA-Z0-9+]+[@][a-zA-Z0-9]+[.]co(m|.in)$";
     static String PHONE= "^[0-9]{2}[0-9]{10}";
    static  String PASSWORD_PATTERN_1 = "[a-z-0-9](?=.*[A-Z]).{8,40}";
    static  String PASSWORD_PATTERN_2=  "[a-zA-Z0-9](?=.*[A-Z]).{8,40}";
@@ -25,6 +26,10 @@ public class UserRegistration {
     public boolean validEmail(String email) {
         Pattern pattern = Pattern.compile(EMAIL_PATTERN);
         return pattern.matcher(email).matches();
+    }
+    public boolean validEmail2(String email2) {
+        Pattern pattern = Pattern.compile(EMAIL_PATTERN_2);
+        return pattern.matcher(email2).matches();
     }
     public boolean validPhone(String phone) {
         Pattern pattern = Pattern.compile(PHONE);
