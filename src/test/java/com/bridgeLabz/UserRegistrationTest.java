@@ -32,7 +32,7 @@ public class UserRegistrationTest {
     @Test
     public void email_should_return_true() {
         UserRegistration userValidater = new UserRegistration();
-        boolean result = userValidater.validEmail("bridgelabz@gmail.com");
+        boolean result = userValidater.validEmail("bridge.labz@gmail.co.in");
         Assert.assertEquals(true,result);
     }
     @Test
