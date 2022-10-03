@@ -53,4 +53,16 @@ public class UserRegistrationTest {
         boolean result = ur.validPhone("87415927187");
         Assert.assertEquals(false,result);
     }
+    @Test
+    public void password1_should_return_True()  {
+        UserRegistration ur = new UserRegistration();
+        boolean result = ur.validPassword1("7845B22441");
+        Assert.assertEquals(true,result);
+    }
+    @Test
+    public void password1_should_return_False() {
+        UserRegistration ur = new UserRegistration();
+        boolean result = ur.validPassword1("785bridge");
+        Assert.assertEquals(false,result);
+    }
 }
